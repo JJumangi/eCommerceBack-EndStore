@@ -4,11 +4,13 @@
 
 For this assignment:
 
-- I was attempting to build the back end.
-- This applications allows users to view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role.
-- This application utlizes Express.js to use Sequelize to interact with a MySQL database.
+- I was attempting to build the back end of an ecommerce store.
+- This applications routes are up and working utilizing Express.js API to use Sequilze to ineract with a MySQL database.
+- Instead of using Insomnia to test routes, I used ThunderClient. My teacher told me this was okay to use instead because Insomnia is no longer free.
 
 ## **Link to Application Walk-Through**
+
+(https://drive.google.com/file/d/1C2DhnXjo6OocILjAR-YhpyoUIce26pA3/view)
 
 Thank you for looking at my project!
 -Jon
