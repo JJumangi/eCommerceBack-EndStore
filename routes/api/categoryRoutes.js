@@ -14,13 +14,13 @@ router.get('/', (req, res) => {
 });
 //find category by id
 router.get('/:id', (req, res) => {
-  Category.findOn({
+  Category.findOne({
     where: {
       id: req.params.id,
     },
     include: [Product],
   })
-  .then((categories) => res.json(categories))
+  .then((category) => res.json(category))
   .catch((err) => res.status(500).json(err));
 
 });
@@ -28,7 +28,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   Category.create(req.body)
   .then((category) => res.json(category))
-  .catch((err) => res.status(500).json(err));
+  .catch((err) => res.status(400).json(err));
 });
 //update category
 router.put('/:id', (req, res) => {
@@ -38,7 +38,7 @@ router.put('/:id', (req, res) => {
     },
   })
   .then((category) => res.json(category))
-  .catch((err) => res.status(500).json(err));
+  .catch((err) => res.status(400).json(err));
   // update a category by its `id` value
 });
 //delete category
@@ -48,7 +48,8 @@ router.delete('/:id', (req, res) => {
       id: req.params.id,
     },
   })
-
+  .then((category) => res.status(200).json(category))
+  .catch((err) => res.status(400).json(err));
 });
 
 module.exports = router;
